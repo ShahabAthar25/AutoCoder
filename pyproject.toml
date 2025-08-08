@@ -1,0 +1,9 @@
+[project]
+name = "autocoder"
+version = "0.1.0"
+description = "A simple CLI for AutoCoder"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+dependencies = []
+
+[project.scripts]
+AutoCoder = "autocoder.cli:main"
