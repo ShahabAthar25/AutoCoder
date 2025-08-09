@@ -1,10 +1,24 @@
 import argparse
 
+from autocoder.shell import AutoCoderShell
+
 
 def main():
-    parser = argparse.ArgumentParser(description="AutoCoder CLI")
-    parser.add_argument("prompt", help="The prompt to process")
+    parser = argparse.ArgumentParser(description="AutoCoder interactive shell.")
+    parser.add_argument(
+        "--login",
+        action="store_true",
+        help="Login and store credentials in the keyring",
+    )
     args = parser.parse_args()
 
-    # Simulate doing something with the prompt
-    print(f"Processing prompt: {args.prompt}")
+    shell = AutoCoderShell()
+
+    if args.login:
+        shell.login()
+
+    shell.run()
+
+
+if __name__ == "__main__":
+    main()
