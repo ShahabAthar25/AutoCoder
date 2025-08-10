@@ -11,11 +11,12 @@ class AutoCoderShell:
         store_api_key()
 
     def run(self):
-        print("Welcome to AutoCoder shell. Type 'exit' to quit.")
         api_key = get_api_key()
 
         if api_key is None:
             return
+
+        print("Welcome to AutoCoder shell. Type 'exit' to quit.")
 
         while True:
             try:
